@@ -6,5 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <h1>{{ name }}</h1>
+      <ul v-if="characters.length">
+        <li v-for="character in characters">
+          Name: {{ character.name }}
+          Birth year: {{ character.birthYear }}
+        </li>
+      </ul>
+      <div v-else>No characters found</div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            name: 'Star Wars',
+            characters: [
+              {
+                name: 'Luke Skywalker',
+                birthYear: '19BBY'
+              },
+              {
+                name: 'C-3PO',
+                birthYear: '112BBY'
+              }
+            ]
+          }
+        }
+      });
+
+      app.mount('#app');
+    </script>
+  </body>
 </html>
