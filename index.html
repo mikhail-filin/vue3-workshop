@@ -8,6 +8,14 @@
   </head>
   <body>
     <div id="app">
+      <h1>Statistics by elements:</h1>
+      <ul>
+        <li v-for="(count, element) in elementStatistics">
+          {{element}}: {{count}}
+        </li>
+      </ul>
+
+      <h1>Characters:</h1>
       <p v-if="characterList.length === 0">There are no characters</p>
       <ul v-else-if="characterList.length % 2 === 0">
         <li v-for="character in characterList">
@@ -42,24 +50,47 @@
       Vue.createApp({
         data: () => ({
           newCharacter: {
-            name: ''
+            name: '',
+            elements: []
           },
           characterList: [
             {
-              name: 'Aang'
+              name: 'Aang',
+              elements: ['Air', 'Fire', 'Earth', 'Water']
             },
             {
-              name: 'Zuko'
+              name: 'Zuko',
+              elements: ['Fire']
             },
             {
-              name: 'Toph'
+              name: 'Toph',
+              elements: ['Earth']
             },
             {
-              name: 'Katara'
+              name: 'Katara',
+              elements: ['Water']
             }
           ],
           favoriteList: []
         }),
+        computed: {
+          elementStatistics() {
+            const elements = ['Air', 'Fire', 'Earth', 'Water'];
+            const statistics = {
+              Air: 0,
+              Fire: 0,
+              Earth: 0,
+              Water: 0
+            };
+
+            return this.characterList.reduce((acc, curr) => {
+              elements.forEach((element) => {
+                acc[element] += curr.elements.indexOf(element) > -1
+              });
+              return acc;
+            }, statistics);
+          }
+        },
         methods: {
           addNewCharacter() {
             this.characterList.push(this.newCharacter)
