@@ -1,7 +1,7 @@
 <script setup>
 import UserCard from "./UserCard.vue";
-import { defineProps } from "vue";
-import { userList } from "../composables/useUserStore";
+import { defineProps, ref } from "vue";
+import { userList } from "@/composables/useUserStore";
 
 defineProps({
   title: {
@@ -11,13 +11,12 @@ defineProps({
 });
 
 defineEmits(["update-user-list"]);
+const borderColor = ref("red");
 
 async function fetchUsers() {
-  const response = await fetch(
-    "https://jsonplaceholder.typicode.com/users"
-  ).then((response) => response.json());
-
-  return response;
+  return await fetch("https://jsonplaceholder.typicode.com/users").then(
+    (response) => response.json()
+  );
 }
 
 userList.value = await fetchUsers();
@@ -26,17 +25,19 @@ userList.value = await fetchUsers();
 <template>
   <main>
     <h1>{{ title }}</h1>
+    <input type="color" v-model="borderColor" />
     <ul>
       <UserCard
         v-for="user in userList"
         :user="user"
         :key="`user-${user.id}`"
+        :border-color="borderColor"
       />
     </ul>
   </main>
 </template>
 
-<style>
+<style scoped>
 main {
   display: flex;
   justify-content: center;
