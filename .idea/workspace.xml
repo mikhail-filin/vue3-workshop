@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5a0c26f-242b-4609-820a-96bd9fb954c3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/cest-la-vue/src/components/UserPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cest-la-vue/src/components/UserPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cest-la-vue/src/components/UserCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cest-la-vue/src/components/UserCard.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
