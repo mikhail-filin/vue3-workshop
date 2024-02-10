@@ -1,32 +1,18 @@
-<script>
+<script setup>
 import UserCard from "./UserCard.vue";
 import { reactive } from "vue";
 
-export default {
-  components: {
-    UserCard,
-  },
-  async setup() {
-    const state = reactive({
-      userList: [],
-    });
+const state = reactive({
+  userList: [],
+});
 
-    async function fetchUsers() {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users"
-      ).then((response) => response.json());
+async function fetchUsers() {
+  return await fetch("https://jsonplaceholder.typicode.com/users").then(
+    (response) => response.json()
+  );
+}
 
-      return response;
-    }
-
-    state.userList = await fetchUsers();
-
-    return {
-      state,
-      fetchUsers,
-    };
-  },
-};
+state.userList = await fetchUsers();
 </script>
 
 <template>
