@@ -3,8 +3,8 @@ export default {
   props: {
     characters: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     benderStatistics() {
@@ -27,14 +27,14 @@ export default {
       return statistics;
     },
   },
-}
+};
 </script>
 <template>
   <h2>Statistics</h2>
   <ul>
     <li
-        v-for="(stat, type) in benderStatistics"
-        :key="`bender-${stat}-${type}`"
+      v-for="(stat, type) in benderStatistics"
+      :key="`bender-${stat}-${type}`"
     >
       {{ type }}: {{ stat * 2 }}
     </li>

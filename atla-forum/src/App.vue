@@ -1,8 +1,8 @@
 <script>
-import CharacterList from './components/CharacterList.vue';
-import FavoriteCharacterList from './components/FavoriteCharacterList.vue';
-import Statistics from './components/Statistics.vue';
-import NewCharacterInput from './components/NewCharacterInput.vue';
+import CharacterList from "./components/CharacterList.vue";
+import FavoriteCharacterList from "./components/FavoriteCharacterList.vue";
+import Statistics from "./components/StatisticList.vue";
+import NewCharacterInput from "./components/NewCharacterInput.vue";
 
 export default {
   data() {
@@ -25,21 +25,33 @@ export default {
           element: ["Water"],
         },
       ],
-      favoriteList: []
-    }
+      favoriteList: [],
+    };
   },
   components: {
     Statistics,
     CharacterList,
     FavoriteCharacterList,
-    NewCharacterInput
-  }
-}
+    NewCharacterInput,
+  },
+  methods: {
+    markAsFavorite(event) {
+      this.favoriteList.push(event);
+    },
+    addNewCharacter(event) {
+      this.characterList.push(event);
+    },
+  },
+};
 </script>
 
 <template>
-  <Statistics :characters="characterList"/>
-  <CharacterList :characterList="characterList" :favoriteList="favoriteList"/>
-  <FavoriteCharacterList :favoriteList="favoriteList"/>
-  <NewCharacterInput :characterList="characterList"/>
+  <Statistics :characters="characterList" />
+  <CharacterList
+    :characterList="characterList"
+    :favoriteList="favoriteList"
+    @favoriteCharacter="markAsFavorite($event)"
+  />
+  <FavoriteCharacterList :favoriteList="favoriteList" />
+  <NewCharacterInput @addNewCharacter="addNewCharacter($event)" />
 </template>

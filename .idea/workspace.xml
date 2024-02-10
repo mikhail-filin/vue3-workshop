@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5a0c26f-242b-4609-820a-96bd9fb954c3" name="Changes" comment="" />
+    <list default="true" id="b5a0c26f-242b-4609-820a-96bd9fb954c3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atla-forum/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/atla-forum/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atla-forum/src/components/CharacterList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/atla-forum/src/components/CharacterList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atla-forum/src/components/FavoriteCharacterList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/atla-forum/src/components/FavoriteCharacterList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atla-forum/src/components/NewCharacterInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/atla-forum/src/components/NewCharacterInput.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atla-forum/src/components/Statistics.vue" beforeDir="false" afterPath="$PROJECT_DIR$/atla-forum/src/components/StatisticList.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,9 +23,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2c4rU1GU3IIkdyTa0Kr7tOrv90f" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -35,12 +42,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "06-exercise",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Vue template",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Personal\\vue3-workshop\\atla-forum\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "C:\\Users\\gorty\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -53,7 +64,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707381704203</updated>
-      <workItem from="1707381705550" duration="9971000" />
+      <workItem from="1707381705550" duration="10604000" />
+      <workItem from="1707408108565" duration="130000" />
+      <workItem from="1707549245432" duration="1493000" />
     </task>
     <servers />
   </component>
